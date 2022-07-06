@@ -1,3 +1,3 @@
 provider "aws" {
-    region = var.region_name[0]
+  region = var.region_name[0]
 }
