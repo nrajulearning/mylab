@@ -14,3 +14,13 @@ variable "ports" {
   default = [22, 80, 8081, 443, 8080]
 
 }
+variable "ami" {
+  type    = string
+  default = "ami-006d3995d3a6b963b"
+}
+
+variable "instance_type" {
+  type    = string
+  default = "t2.micro"
+
+}
