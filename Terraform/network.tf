@@ -65,3 +65,31 @@ resource "aws_security_group" "mylab-security-group" {
         Name = "allow_tls"
     }
 }
+
+resource "aws_route_table" "mylab-route-table" {
+    vpc_id = aws_vpc.mylab-vpc.id
+
+    route {
+        cidr_block = var.cidr_block[3]
+        gateway_id = aws_internet_gateway.mylab-IntGW.id
+    }
+
+    tags = {
+      "Name" = "mylab_route_table"
+    }
+  
+  depends_on = [
+    aws_vpc.mylab-vpc
+  ]
+}
+
+resource "aws_route_table_association" "mylab-association" {
+    subnet_id = aws_subnet.mylab-subnet1-public.id
+    route_table_id = aws_route_table.mylab-route-table.id
+
+    depends_on = [
+        aws_route_table.mylab-route-table,
+        aws_subnet.mylab-subnet1-public
+    ]
+
+}
