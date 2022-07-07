@@ -10,9 +10,9 @@ variable "cidr_block" {
 }
 
 variable "availability_zone" {
-  type = list(string)
-  default = [ "ap-south-1a","ap-south-1b","ap-south-1c" ]
-  
+  type    = list(string)
+  default = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
+
 }
 
 variable "ports" {

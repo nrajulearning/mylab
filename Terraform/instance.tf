@@ -65,7 +65,7 @@ resource "aws_instance" "mylab-ansible-node1" {
 
   tags = {
     "Name" = "Ansible-node1",
-    "Tool" =  "Tomcat-Server"
+    "Tool" = "Tomcat-Server"
   }
 
   lifecycle {
@@ -85,8 +85,8 @@ resource "aws_instance" "mylab-ansible-node2" {
   user_data                   = file("./installDocker.sh")
 
   tags = {
-    "Name" = "Ansible-node1",
-    "Tool" =  "Docker"
+    "Name" = "Ansible-node2",
+    "Tool" = "Docker"
   }
 
   lifecycle {

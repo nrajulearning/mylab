@@ -24,5 +24,5 @@
 ![preview](Terraform/Images/image1.png)
 
 
-* Day 1 Activity -> Created required infrastructure using Terraform (Completed)
+* Day 1 Activity Completed => Created Required Infrastructure in AWS Cloud
 
