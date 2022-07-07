@@ -74,7 +74,6 @@ resource "aws_instance" "mylab-ansible-node1" {
 
 }
 
-
 resource "aws_instance" "mylab-ansible-node2" {
   ami                         = var.ami
   instance_type               = var.instance_type
@@ -92,6 +91,5 @@ resource "aws_instance" "mylab-ansible-node2" {
   lifecycle {
     create_before_destroy = true
   }
-
 }
 

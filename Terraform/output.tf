@@ -11,9 +11,9 @@ output "instance_ansible_controller_ip_add" {
 }
 
 output "instance_ansible_Node01_ip_add" {
-  value = aws_instance.mylab-ansible-node1.public_ip
+  value = aws_instance.mylab-ansible-node1.private_ip
 }
 
 output "instance_ansible_Node02_ip_add" {
-  value = aws_instance.mylab-ansible-node2.public_ip
+  value = aws_instance.mylab-ansible-node2.private_ip
 }

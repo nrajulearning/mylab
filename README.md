@@ -3,7 +3,7 @@
 ### Project Flow. 
 ------------------
 
-![preview](Terraform/Images/image2.png)
+![preview](Terraform/Images/image1.png)
 
 ### TOOLS USED
 ----------------
@@ -21,7 +21,7 @@
   
 ### AWS Architecture ###
 --------------------
-![preview](Terraform/Images/image1.png)
+![preview](Terraform/Images/image2.png)
 
 
 * Day 1 Activity Completed => Created Required Infrastructure in AWS Cloud
