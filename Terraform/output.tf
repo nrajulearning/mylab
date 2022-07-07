@@ -9,3 +9,11 @@ output "instance_jenkins_master_ip_addr" {
 output "instance_ansible_controller_ip_add" {
   value = aws_instance.mylab-ansible-controller.public_ip
 }
+
+output "instance_ansible_Node01_ip_add" {
+  value = aws_instance.mylab-ansible-node1.public_ip
+}
+
+output "instance_ansible_Node02_ip_add" {
+  value = aws_instance.mylab-ansible-node2.public_ip
+}

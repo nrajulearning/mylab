@@ -12,6 +12,7 @@ resource "aws_vpc" "mylab-vpc" {
 resource "aws_subnet" "mylab-subnet1-public" {
   vpc_id     = aws_vpc.mylab-vpc.id
   cidr_block = var.cidr_block[1]
+  availability_zone = var.availability_zone[0]
   tags = {
     "Name" = "Subnet1-public"
   }
@@ -21,6 +22,7 @@ resource "aws_subnet" "mylab-subnet1-public" {
 resource "aws_subnet" "mylab-subnet2-private" {
   vpc_id     = aws_vpc.mylab-vpc.id
   cidr_block = var.cidr_block[2]
+  availability_zone = var.availability_zone[1]
   tags = {
     "Name" = "Subnet2-private"
   }
