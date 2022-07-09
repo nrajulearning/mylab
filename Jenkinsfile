@@ -35,13 +35,16 @@ pipeline{
 
                 def NexusRepo = Version.endsWith("SNAPSHOT") ? "NrajuDevOpsLab-SNAPSHOT" : "NrajuDevOpsLab-RELEASE"
 
-                nexusArtifactUploader 
+                nexusArtifactUploader artifacts: [[artifactId: '', 
+                classifier: '', 
+                file: "target/${ArtifactId}-${Version}.war", 
+                type: '.war']], 
                 credentialsId: 'nexus', 
                 groupId: 'com.nrajudevopslab', 
                 nexusUrl: '172.20.10.70:8081', 
                 nexusVersion: 'nexus3', 
                 protocol: 'http', 
-                repository: 'http://172.20.10.70:8081/repository/nrajuDevopsLab-Snapshot/', 
+                repository: 'nrajuDevopsLab-Snapshot', 
                 version: '0.0.1-SNAPSHOT'
             }
         }
