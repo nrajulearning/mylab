@@ -46,8 +46,10 @@ pipeline{
                 protocol: 'http', 
                 repository: 'nrajuDevopsLab-Snapshot', 
                 version: '0.0.1-SNAPSHOT'
+                }
             }
         }
+
 
         // Stage 4 : Print some information
         stage ('Print Environment variables'){
@@ -103,7 +105,5 @@ pipeline{
     //             }
     //         }
 
-        }
-    }   
-
+    }
 }
