@@ -23,7 +23,7 @@ resource "aws_instance" "mylab-jenkins-master" {
   vpc_security_group_ids      = [aws_security_group.mylab-security-group.id]
   subnet_id                   = aws_subnet.mylab-subnet1-public.id
   associate_public_ip_address = true
-  user_data                   = file("./Jenkinsinstall.sh")
+  user_data                   = file("./InstallJenkins.sh")
 
   tags = {
     "Name" = "Jenkins-Master"
@@ -63,7 +63,7 @@ resource "aws_instance" "mylab-ansible-node1" {
   vpc_security_group_ids      = [aws_security_group.mylab-security-group.id]
   subnet_id                   = aws_subnet.mylab-subnet1-public.id
   associate_public_ip_address = true
-  user_data                   = file("./installAnsibleNode.sh")
+  user_data                   = file("./AnsibleManagedNode.sh")
 
   tags = {
     "Name" = "Tomcat-server",
@@ -83,7 +83,7 @@ resource "aws_instance" "mylab-ansible-node2" {
   vpc_security_group_ids      = [aws_security_group.mylab-security-group.id]
   subnet_id                   = aws_subnet.mylab-subnet1-public.id
   associate_public_ip_address = true
-  user_data                   = file("./installDocker.sh")
+  user_data                   = file("./Docker.sh")
 
   tags = {
     "Name" = "Docker-Server",
@@ -96,7 +96,7 @@ resource "aws_instance" "mylab-ansible-node2" {
 }
 
 resource "aws_instance" "mylab-nexus" {
-  ami                         = var.ami[1]
+  ami                         = var.ami[0]
   instance_type               = var.instance_type
   key_name                    = "Automation"
   vpc_security_group_ids      = [aws_security_group.mylab-security-group.id]

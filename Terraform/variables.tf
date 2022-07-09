@@ -22,7 +22,7 @@ variable "ports" {
 }
 variable "ami" {
   type    = list(string)
-  default = ["ami-006d3995d3a6b963b", " ami-079fd9955144c3788"]
+  default = ["ami-05c8ca4485f8b138a"]
 }
 
 variable "instance_type" {
