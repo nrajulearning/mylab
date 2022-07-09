@@ -1,5 +1,5 @@
-output "instance_test_ip_addr" {
-  value = aws_instance.mylab-instance.public_ip
+output "instance_nexus_ip_addr" {
+  value = aws_instance.mylab-nexus.private_ip
 }
 
 output "instance_jenkins_master_ip_addr" {
